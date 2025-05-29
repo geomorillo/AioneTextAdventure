@@ -21,7 +21,7 @@ Para compilar y ejecutar este proyecto, necesitarás tener instalado el SDK de .
 2. **Instalar .NET SDK (versión 9.0 o superior):**
    Este proyecto utiliza .NET 9.0. Si no tienes .NET instalado, descárgalo e instálalo desde el sitio oficial de Microsoft: [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
    
-2.1   O puedes usar visual studio 2022 para compilar el proyecto.
+2.1 O puedes usar visual studio 2022 para compilar el proyecto.
 
 3. **Restaurar Dependencias:**
    Navega al directorio del proyecto en tu terminal y ejecuta:
