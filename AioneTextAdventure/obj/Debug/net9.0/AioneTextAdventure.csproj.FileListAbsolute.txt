@@ -1,0 +1,14 @@
+C:\geovanny\dev\games\aione\AioneTextAdventure\bin\Debug\net9.0\AioneTextAdventure.exe
+C:\geovanny\dev\games\aione\AioneTextAdventure\bin\Debug\net9.0\AioneTextAdventure.deps.json
+C:\geovanny\dev\games\aione\AioneTextAdventure\bin\Debug\net9.0\AioneTextAdventure.runtimeconfig.json
+C:\geovanny\dev\games\aione\AioneTextAdventure\bin\Debug\net9.0\AioneTextAdventure.dll
+C:\geovanny\dev\games\aione\AioneTextAdventure\bin\Debug\net9.0\AioneTextAdventure.pdb
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.GeneratedMSBuildEditorConfig.editorconfig
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.AssemblyInfoInputs.cache
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.AssemblyInfo.cs
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.csproj.CoreCompileInputs.cache
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.dll
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\refint\AioneTextAdventure.dll
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.pdb
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\AioneTextAdventure.genruntimeconfig.cache
+C:\geovanny\dev\games\aione\AioneTextAdventure\obj\Debug\net9.0\ref\AioneTextAdventure.dll
