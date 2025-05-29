@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AioneTextAdventure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73d3e33dcc0d31c630f19973f88bc8736d8f8167")]
 [assembly: System.Reflection.AssemblyProductAttribute("AioneTextAdventure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AioneTextAdventure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
