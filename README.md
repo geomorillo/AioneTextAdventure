@@ -55,4 +55,6 @@ ver https://ollama.com/ para mas detalles e instrucciones como instalar ollama.
 
 ---
 
+![image](https://github.com/user-attachments/assets/afbc7580-675a-47cc-a284-738dc3b0bed7)
+
 ¡Disfruta de la aventura!
