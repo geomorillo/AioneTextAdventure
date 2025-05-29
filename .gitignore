@@ -1,0 +1,35 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+*.build
+*.log
+
+# Packages
+packages/
+*.nupkg
+
+# Rider
+.idea/
+*.iml
+
+# Misc
+*.DS_Store
+*.bak
+*.obj
+*.pdb
+*.exe
+*.dll
+
+# NuGet
+.nuget/
+
+# .NET Core
+bin/
+obj/
