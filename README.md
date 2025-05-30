@@ -43,7 +43,7 @@ Para compilar y ejecutar este proyecto, necesitarás tener instalado el SDK de .
 ## Requisitos
 
 - .NET SDK instalado.
-- Servidor de Ollama corriendo localmente con el modelo `cogito:latest` (o cualquier otro preferido ).
+- Servidor de Ollama corriendo localmente con el modelo `cogito:latest` .
 ver https://ollama.com/ para mas detalles e instrucciones como instalar ollama.
 
 ## Estructura del Proyecto
