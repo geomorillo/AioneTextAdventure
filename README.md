@@ -14,7 +14,7 @@ Para compilar y ejecutar este proyecto, necesitarás tener instalado el SDK de .
 
 1. **Clonar el Repositorio (si aplica):**
    ```bash
-   git clone <URL_del_repositorio>
+   git clone https://github.com/geomorillo/AioneTextAdventure
    cd AioneTextAdventure
    ```
 
