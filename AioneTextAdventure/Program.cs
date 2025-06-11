@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using AioneTextAdventure;
 using System.Threading.Tasks;
+
+// Añadir using para LmStudioApiClient
+
 
 namespace AioneTextAdventure
 {
@@ -15,6 +17,28 @@ namespace AioneTextAdventure
             Console.WriteLine(GameContext.GetCurrentSceneDescription());
             Console.WriteLine("\n");
 
+            // Preguntar al usuario qué API de IA desea usar
+            Console.WriteLine("¿Qué API de IA deseas usar? (1) Ollama (2) LM Studio");
+            string? apiChoice = Console.ReadLine();
+
+            IAiApiClient apiClient;
+            if (apiChoice == "2")
+            {
+                apiClient = new LmStudioApiClient();
+                Console.WriteLine("Usando LM Studio API.");
+            }
+            else if (apiChoice == "1")
+            {
+                apiClient = new OllamaApiClient();
+                Console.WriteLine("Usando Ollama API.");
+            }
+            else
+            {
+                Console.WriteLine("Opción no válida. Usando Ollama API por defecto.");
+                apiClient = new OllamaApiClient();
+            }
+
+            AICharacter.Initialize(apiClient);
             await Game.Start();
         }
     }
@@ -27,7 +51,7 @@ namespace AioneTextAdventure
             string lastSceneDescription = GameContext.GetCurrentSceneDescription();
             while (true)
             {
-                string playerInput;
+                string? playerInput;
                 List<string> currentOptions = GameContext.GetCurrentOptions(); // Obtener opciones de la iteración anterior
 
                 if (currentOptions.Count > 0)
@@ -39,7 +63,13 @@ namespace AioneTextAdventure
                     }
 
                     Console.Write("Tu acción (o número de opción): ");
-                    string finalPlayerInput = Console.ReadLine();
+                    string? finalPlayerInput = Console.ReadLine();
+
+                    if (string.IsNullOrEmpty(finalPlayerInput))
+                    {
+                        Console.WriteLine("Por favor, introduce una acción válida.");
+                        continue;
+                    }
 
                     if (int.TryParse(finalPlayerInput, out int optionNumber) && optionNumber > 0 && optionNumber <= currentOptions.Count)
                     {
@@ -48,7 +78,7 @@ namespace AioneTextAdventure
                     }
                     else
                     {
-                        playerInput = finalPlayerInput; // Use the free-form input if not an option
+                        playerInput = finalPlayerInput; // 
                     }
                 }
                 else
@@ -59,6 +89,11 @@ namespace AioneTextAdventure
                     playerInput = Console.ReadLine();
                 }
 
+                if (string.IsNullOrEmpty(playerInput))
+                {
+                    Console.WriteLine("Por favor, introduce una acción válida.");
+                    continue;
+                }
 
                 if (playerInput.ToLower() == "salir")
                 {
@@ -66,7 +101,7 @@ namespace AioneTextAdventure
                     break;
                 }
 
-                string aiResponse = await AICharacter.GetResponse(playerInput); // Usar playerInput final
+                string aiResponse = await AICharacter.GetResponse(playerInput);
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"IA: {aiResponse}");
                 Console.ResetColor();

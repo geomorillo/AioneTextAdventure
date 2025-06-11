@@ -6,8 +6,8 @@ namespace AioneTextAdventure
     public static class GameContext
     {
         public static string CurrentScene { get; set; } = "inicio";
-        public static Dictionary<string, string> SceneDescriptions { get; private set; }
-        public static string AICharacterPersonality { get; private set; }
+        public static Dictionary<string, string> SceneDescriptions { get; private set; } = null!;
+        public static string AICharacterPersonality { get; private set; } = null!;
         public static List<string> CurrentOptions { get; private set; } = new List<string>();
 
         static GameContext()
@@ -25,7 +25,7 @@ namespace AioneTextAdventure
 
         public static string GetCurrentSceneDescription()
         {
-            if (SceneDescriptions.TryGetValue(CurrentScene, out string description))
+            if (SceneDescriptions != null && SceneDescriptions.TryGetValue(CurrentScene, out string description))
             {
                 return description;
             }

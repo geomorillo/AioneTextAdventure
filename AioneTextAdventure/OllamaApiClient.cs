@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AioneTextAdventure 
 { 
-    public class OllamaApiClient 
+    public class OllamaApiClient : IAiApiClient
     { 
         private readonly HttpClient _httpClient; 
         private readonly string _ollamaApiUrl; 
@@ -17,8 +17,9 @@ namespace AioneTextAdventure
             _ollamaApiUrl = ollamaApiUrl; 
         } 
 
-        public async Task<string> GetOllamaResponse(string prompt, string model = "cogito:latest") 
+        public async Task<string> GetCompletionAsync(string prompt) 
         { 
+            string model = "cogito:latest"; // Default model for Ollama 
             try 
             { 
                 var requestBody = new 

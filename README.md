@@ -1,6 +1,6 @@
 # Aventura de IA Conversacional
 
-Este es un juego de aventura de texto interactivo impulsado por IA, donde la narrativa y las opciones de diálogo son generadas dinámicamente por un modelo de lenguaje (Ollama).
+Este es un juego de aventura de texto interactivo impulsado por IA, donde la narrativa y las opciones de diálogo son generadas dinámicamente por un modelo de lenguaje (Ollama o LM Studio).
 
 ## Funciones del Juego
 
@@ -35,7 +35,10 @@ Para compilar y ejecutar este proyecto, necesitarás tener instalado el SDK de .
    ```
 
 5. **Ejecutar el Juego:**
-   Asegúrate de que el servidor de Ollama esté corriendo localmente en `http://localhost:11434` con el modelo `cogito:latest` disponible. Luego, ejecuta:
+   Al iniciar el juego, se te preguntará qué API de IA deseas usar: Ollama o LM Studio.
+   - Si eliges Ollama, asegúrate de que el servidor de Ollama esté corriendo localmente en `http://localhost:11434` con el modelo `cogito:latest` disponible.
+   - Si eliges LM Studio, asegúrate de que LM Studio esté corriendo localmente en `http://localhost:1234`.
+   Luego, ejecuta:
    ```bash
    dotnet run --project AioneTextAdventure
    ```
@@ -43,8 +46,10 @@ Para compilar y ejecutar este proyecto, necesitarás tener instalado el SDK de .
 ## Requisitos
 
 - .NET SDK instalado.
-- Servidor de Ollama corriendo localmente con el modelo `cogito:latest` (o cualquier otro preferido ).
-ver https://ollama.com/ para mas detalles e instrucciones como instalar ollama.
+- **Para Ollama:** Servidor de Ollama corriendo localmente con el modelo `cogito:latest` (o cualquier otro preferido).
+  Ver [https://ollama.com/](https://ollama.com/) para más detalles e instrucciones sobre cómo instalar Ollama.
+- **Para LM Studio:** LM Studio corriendo localmente (por defecto en `http://localhost:1234`).
+  Ver [https://lmstudio.ai/](https://lmstudio.ai/) para más detalles e instrucciones sobre cómo instalar LM Studio.
 
 ## Estructura del Proyecto
 
@@ -52,6 +57,8 @@ ver https://ollama.com/ para mas detalles e instrucciones como instalar ollama.
 - `GameContext.cs`: Gestiona el estado actual del juego, la descripción de la escena y las opciones disponibles.
 - `OllamaApiClient.cs`: Clase para interactuar con la API de Ollama.
 - `AICharacter.cs`: Clase para manejar la lógica específica del personaje de IA y el procesamiento de respuestas.
+- `LmStudioApiClient.cs`: Clase para interactuar con la API de LM Studio.
+- `IAiApiClient.cs`: Interfaz que define el contrato para los clientes de la API de IA.
 
 ---
 
